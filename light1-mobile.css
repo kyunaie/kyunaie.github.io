@@ -1,0 +1,79 @@
+/* -----------MOBILE--------------- */
+@media screen and (max-width: 680px) 
+{
+    /* Hiding all the elements except home */
+    ul.topnav li:not(:nth-child(1)) 
+    {
+      display: none;
+    }
+    nav ul.topnav{
+      background-color:  #1ba94c;
+      /* background-color:  #f7f8f3; */
+
+  }
+    /* setting the dropdown menu to right */
+    ul.topnav li.dropdownIcon {
+      display: block;
+      float: right;
+    }
+    ul.topnav li.toggleCss {
+      display: block;
+      float: right;
+    }
+    /* Fixing the position ogf the dropdown tag so that it does not move to the botton=m of the list*/
+    ul.topnav.responsive li.dropdownIcon {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    ul.topnav.responsive li.toggleCss {
+      position: absolute;
+      top: 0;
+      right:43px;
+    }
+    /* Properties of the list in dropdown */
+    ul.topnav.responsive {
+      position: relative;
+    }
+    /* list items */
+    ul.topnav.responsive li {
+      display: inline;
+      float: none; 
+    }
+    /* anchor tags arranged in the dropdown */
+    ul.topnav.responsive li a {
+      display: block;
+      text-align: left;
+      background-color:#1ba94c;
+      color:  #f7f8f3;
+      
+    }
+    ul.topnav.responsive li a.home{
+      padding-bottom: 9px;
+    }
+
+  .active, ul.topnav.responsive li a:hover {
+ 
+      background-color:#f7f8f3 !important; 
+      color: #1ba94c !important;
+      
+  }
+  
+    .row{
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .col-6
+    {
+        width: 100%;
+        margin:0;
+    }
+    h1.Kyue {
+      transition: 0s;
+      font-size: 5em;
+  }
+}
+
+
