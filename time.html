@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="grid.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *{
+    background-color: #f7f8f3;
+    margin: 0;
+    padding: 0;
+    color:#f7f8f3;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background-color: #f7f8f3;
+    padding: 30px;
+}
+.container {
+    background-color: #0e0f11;
+    /* background-color: #375899; */
+    border-radius: 30px;
+    /* padding: 10px; */
+    height: 500px;
+    margin:0 5%;
+    display: grid;
+    /* grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr; */
+    grid-template-columns: 0.7fr repeat(5,1fr);
+    grid-template-rows: 0.7fr 1fr 1fr 0fr 1fr 1fr 0.2fr 1fr 1fr 1fr 1fr;
+    column-gap: 0px;
+    row-gap: 0px;
+
+
+    -webkit-box-shadow: 18px 21px 65px -1px rgba(0,0,0,0.75);
+-moz-box-shadow: 18px 21px 65px -1px rgba(0,0,0,0.75);
+box-shadow: 18px 21px 65px -1px rgba(0,0,0,0.75);
+    
+}
+.item{
+    background-color: #6fec6f;
+    background-color: #0e0f11;
+    display:flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    /* height: 100px;
+    width: 100px; */
+    /* place-self: center; */
+}
+.break, .lunch{
+/* grid-column-start: 1;
+grid-column-end: 7; */
+grid-column: 1 / span 6;
+background-color: #0e0f11;
+}
+.black
+{
+    background-color: #0e0f11;
+}
+.day
+{
+    background-color: #555555;
+    /* margin-bottom: 2px; */
+}
+#corner1{
+    border-radius: 20px 0 0 0;
+}
+#corner2{
+    border-radius: 0 0 0 20px;
+    /* background-color: #fff; */
+}
+#corner3{
+    border-radius: 0 0 20px 0;
+}
+#corner4{
+    border-radius: 0 20px 0 0;
+}
+
+/* Courses */
+.cm{
+    background-color: #ff1d58;
+}
+.sa{
+    background-color: #991170;
+    /* background-color: #007bff; */
+}
+.ee{
+    background-color: #28a745;
+    /* padding: 0px;
+    margin: 0px 20px;
+    border-radius:20px; */
+}
+.wr{
+    background-color: #28b9cf;
+}
+.fr{
+    background-color: #379683;
+}
+.colors{
+    /* Black& white */
+    color: #0e0f11;
+    color: #f7f8f3;
+
+    /* Green & Blue */
+    color: #05386b;
+    color: #379683;
+    color: #5cdb95;
+    color: #8ee4af;
+    color: #edf5e1;
+
+    /* gold and black */
+    color: #272727;
+    color: #747474;
+    color: #ff652f;
+    color: #ffe400;
+    color: #14a76c;
+
+    /* warm minimal */
+    color: #eae7dc;
+    color: #d8c3a5;
+    color: #8e8d8a;
+    color: #e98074;
+    color: #e85a4f;
+}
+
+fonts{
+font-family: 'Merriweather', serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+}
+
+@media (max-width: 576px) {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        padding: 0;
+        margin: 0;
+    }
+    #corner1{
+        border-radius:0;
+    }
+    #corner2{
+        border-radius:0;
+        /* background-color: #fff; */
+    }
+    #corner3{
+        border-radius:0;
+    }
+    #corner4{
+        border-radius:0;
+    }
+  }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item day" id="corner1"> Civil A Batch </div>
+        <div class="item day">Monday</div>
+        <div class="item day">Tuesday</div>
+        <div class="item day">Wedesday</div>
+        <div class="item day">Thursday</div>
+        <div class="item day" id="corner4">Friday</div>
+        <!-- Done till here -->
+        <div class="item black">08:00 to 9:00</div>
+        <div class="item cm">CM</div>
+        <div class="item black"></div>
+        <div class="item wr">WRE-II</div>
+        <div class="item ee">EE-II</div>
+        <div class="item black"></div>
+        
+        <div class="item black">09:00 to 10:00</div>
+        <div class="item sa">SA-III</div>
+        <div class="item fr">French</div>
+        <div class="item cm">QS</div>
+        <div class="item black"></div>
+        <div class="item wr">WRE</div>
+        
+        <div class="item break"></div>
+        
+        <div class="item black">10:15 to 11:15</div>
+        <div class="item ee">EE-II</div>
+        <div class="item"></div>
+        <div class="item sa">SA-III</div>
+        <div class="item"></div>
+        <div class="item cm">CM</div>
+
+        <div class="item black">11:15 to 12:15</div>
+        <div class="item"></div>
+        <div class="item wr">WRE-II</div>
+        <div class="item ee">EE-II</div>
+        <div class="item"></div>
+        <div class="item sa">SA-III</div>
+
+        <div class="item lunch"></div>
+
+        <div class="item black">01:00 to 02:00</div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+
+        <div class="item black">02:00 to 03:00</div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+
+        <div class="item black">03:00 to 04:00</div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+
+        <div class="item black" id="corner2">04:00 to 05:00</div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item" id="corner3"></div>
+
+
+
+        <!-- Alright from here on -->
+    </div>
+
+</body>
+</html>
