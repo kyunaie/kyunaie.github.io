@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+        *{
+            margin: 0;
+            box-sizing: border-box;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav, header, footer {
+            display: inline-block;
+
+        }
+
+        body {
+            margin: auto;
+            color: #8f8f8f;
+                    Background-color: #0e0e0e;
+        }
+        .container {
+            width: 100%;
+            padding-bottom: 2%;
+            padding-top: 1%;
+            line-height: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .row1{
+            display: flex;
+            width: 100%;
+            align-items: center;
+        }
+
+        .row1::after {
+            display: table;
+            clear: both;
+            content: "";
+        }
+        .row{
+            display: flex;
+            width: 100%;
+            align-items: center;
+        }
+
+        .row::after {
+            display: table;
+            clear: both;
+            content: "";
+        }
+        .col-1 {width: 8.33%;};
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;} 
+        .col-4 {width: 40%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+
+        h1
+        {
+            text-align : center;
+            padding-top: 40px;
+            padding-bottom: 20px;
+            font-size: 60px;
+        }
+        .ticButton {
+            width: 100%;
+            min-width: 100px;
+            color: #0e0e0e;
+            Background-color: #0e0e0e;
+            border: 0px solid rgb(151, 42, 42);
+            margin: 0;
+            cursor: pointer;
+            font-size: 1px;
+        }
+        svg{
+            margin: 10px;
+        }
+
+        .ticBorderBottom{
+            border-bottom: 5px solid #1f2528;
+        }
+        .ticBorderRight{
+            border-right: 5px solid #1f2528;
+        }
+        .ticBorderRight1{
+            border-right: 5px solid #0e0e0e;
+        }
+
+
+        .o{
+            color: #008466;
+        }
+        .x{
+            color: #942048;
+        }
+
+        .refresh{
+            padding: 0px 10px;
+            background-color: #0f0f0f;
+            color: rgb(128, 128, 128);
+            border-radius: 16px;
+            border: 0px solid #0f0f0f;
+            margin-top: 1%;
+            margin-bottom: 0;
+            font-size: 20px;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+
+
+
+            box-shadow: 
+                    0px -3px 10px 0 rgba(73, 73, 73, 0.19),
+                    -0 3px 3px 0 rgba(32, 32, 32, 0.19),
+                    -5px -5px 10px 0 rgba(0, 0, 0, 0.19),
+                    -0 15px 60px 0 rgba(19, 19, 19, 0.19),
+                    inset 0px -3px 10px 0 rgba(73, 73, 73, 0.1),
+                    inset -0 3px 3px 0 rgba(73, 73, 73, 0.1),
+                    inset -5px -5px 10px 0 rgba(31, 31, 31, 0.1),
+                    inset -0 15px 60px 0 rgba(29, 29, 29, 0.1);
+
+
+        }
+        footer{
+            line-height: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        }
+        p{
+            font-family: 'Courier New', Courier, monospace;
+            margin-bottom: 10px;
+        }
+        @media screen and (max-width: 680px) 
+        {
+            .row1{
+                display: block;
+            }
+            .col-4{
+                width: 100%;
+                margin:0;
+            }
+        }
+    </style>
+    <title>Tic-Tac-Toe</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row1">
+            <div class="col-4 hide"></div>
+            <div class="col-4 cover">
+                <div class="hContainer">
+                    <h1>Tic-Tac-Toe!</h1>
+                </div>
+                <div class="row">
+                    <div class="col-4 ticBorderBottom  ticBorderRight">
+                        <button type="button" id="1" class="ticButton a1"><svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></button>
+
+                    </div>
+                    <div class="col-4 ticBorderBottom  ticBorderRight">
+                        <button type="button"  id="2" class="ticButton a2"><svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg> </button>
+                    </div> 
+                    <div class="col-4 ticBorderBottom  ticBorderRight1">
+                        <button type="button" id="3"class="ticButton a3"> <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></button>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4 ticBorderBottom ticBorderRight">
+                        <button type="button"id="4" class="ticButton b1"><svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg> </button>
+
+                    </div>
+                    <div class="col-4 ticBorderBottom ticBorderRight">
+                        <button type="button" id="5"class="ticButton b2"> <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></button>
+                    </div>
+                    <div class="col-4 ticBorderBottom  ticBorderRight1">
+                        <button type="button" id="6"class="ticButton b3"> <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></button>
+
+                    </div>              </div>
+                <div class="row">
+                    <div class="col-4 ticBorderRight">
+                        <button type="button" id="7"class="ticButton c1"> <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></button>
+
+                    </div>
+                    <div class="col-4 ticBorderRight">
+                        <button type="button"id="8" class="ticButton c2 "><svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg> </button>
+                    </div>
+                    <div class="col-4 ticBorderRight1">
+                        <button type="button" id="9"class="ticButton c3"> <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></button>
+
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-4 hide"></div>
+        </div>
+    </div>
+
+
+
+<div class="container">
+    <button class="refresh"><small>Refresh</small></button>
+</div>
+        <footer>
+            <div class="">
+                    <p>kyunaie</p>
+            </div>
+        </footer>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        var n=0;
+var items = [
+    [-1, -1, -1],
+    [-1, -1, -1],
+    [-1, -1, -1]
+];
+var stop = true;
+var button = $(".ticButton");
+function stopit()
+{
+    stop = false;
+}
+button.click(function (event)
+{
+    if(stop==false) return;
+    var idd = event.currentTarget.id;
+    if(!event.currentTarget.classList.contains("o") && !event.currentTarget.classList.contains("x"))
+    {
+        if(n%2 === 0)
+        {
+            event.currentTarget.classList.add("x");
+            $(event.currentTarget).html('<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>');
+            if(idd==1){
+                items[0][0] = 0;
+                if(items[0][1]==0 && items[0][2] == 0 || items[1][0]==0 && items[2][0] == 0 || items[1][1]==0 && items[2][2] == 0)
+                {
+                    $("h1").text("Player 1 Wins!");
+                    stopit();
+                }
+            }
+            else if(idd==2){
+                items[0][1] = 0;
+                if(items[0][0]==0 && items[0][2] == 0 || items[1][1]==0 && items[2][1] == 0)
+                {
+                    $("h1").text("Player 1 Wins!");
+                    stopit();
+                }
+
+            }
+            else if(idd==3){
+                items[0][2] = 0;
+                if(items[0][0]==0 && items[0][1] == 0 || items[1][2]==0 && items[2][2] == 0 || items[1][1]==0 && items[2][0] == 0)
+                {
+                    $("h1").text("Player 1 Wins!");
+                    stopit();
+                }
+
+            }
+            else if(idd==4){
+                items[1][0] = 0;
+                if(items[0][0]==0 && items[2][0] == 0 || items[1][1]==0 && items[1][2] == 0)
+                {
+                    $("h1").text("Player 1 Wins!");
+                    stopit();
+                }
+            }
+            else if(idd==5){
+                items[1][1] = 0;
+                if(items[0][0]==0 && items[2][2] == 0 || items[0][1]==0 && items[2][1] == 0 || items[0][2]==0 && items[2][0] == 0 || items[1][0]==0 && items[1][2] == 0)
+                {
+                    $("h1").text("Player 1 Wins!");
+                    stopit();
+                }
+
+            }
+            else if(idd==6){
+
+                items[1][2] = 0;
+                if(items[0][2]==0 && items[2][2] == 0 || items[1][0]==0 && items[1][1] == 0)
+                {
+                    $("h1").text("Player 1 Wins!");
+                    stopit();
+                }
+            }
+            else if(idd==7){
+                items[2][0] = 0;
+                if(items[0][0]==0 && items[1][0] == 0 || items[0][2]==0 && items[1][1] == 0 || items[2][1]==0 && items[2][2] == 0)
+                {
+                    $("h1").text("Player 1 Wins!");
+                    stopit();
+                }
+
+            }
+            else if(idd==8){
+                items[2][1] = 0;
+                if(items[2][0]==0 && items[2][2] == 0 || items[0][1]==0 && items[1][1] == 0)
+                {
+                    $("h1").text("Player 1 Wins!");
+                    stopit();
+                }
+
+            }
+            else if(idd==9){
+                items[2][2] = 0;
+                if(items[0][0]==0 && items[1][1] == 0 || items[0][2]==0 && items[1][2] == 0 || items[2][0]==0 && items[2][1] == 0)
+                {
+                    $("h1").text("Player 1 Wins!");
+                    stopit();
+                }
+
+            }
+        }
+
+        else if(n%2 ===1)
+        {
+            event.currentTarget.classList.add("o");
+            if(idd==1){
+                items[0][0] = 1;
+                if(items[0][1]==1 && items[0][2] == 1 || items[1][0]==1 && items[2][0] == 1 || items[1][1]==1 && items[2][2] == 1)
+                {
+                    $("h1").text("Player 2 Wins!");
+                    stopit();
+                }
+            }
+            else if(idd==2){
+                items[0][1] = 1;
+                if(items[0][0]==1 && items[0][2] == 1 || items[1][1]==1 && items[2][1] == 1)
+                {
+                    $("h1").text("Player 2 Wins!");
+                    stopit();
+                }
+
+            }
+            else if(idd==3){
+                items[0][2] = 1;
+                if(items[0][0]==1 && items[0][1] == 1 || items[1][2]==1 && items[2][2] == 1 || items[1][1]==1 && items[2][0] == 1)
+                {
+                    $("h1").text("Player 2 Wins!");
+                    stopit();
+                }
+
+            }
+            else if(idd==4){
+                items[1][0] = 1;
+                if(items[0][0]==1 && items[2][0] == 1 || items[1][1]==1 && items[1][2] == 1)
+                {
+                    $("h1").text("Player 2 Wins!");
+                    stopit();
+                }
+            }
+            else if(idd==5){
+                items[1][1] = 1;
+                if(items[0][0]==1 && items[2][2] == 1 || items[0][1]==1 && items[2][1] == 1 || items[0][2]==1 && items[2][0] == 1 || items[1][0]==1 && items[1][2] == 1)
+                {
+                    $("h1").text("Player 2 Wins!");
+                    stopit();
+                }
+
+            }
+            else if(idd==6){
+
+                items[1][2] = 1;
+                if(items[0][2]==1 && items[2][2] == 1 || items[1][0]==1 && items[1][1] == 1)
+                {
+                    $("h1").text("Player 2 Wins!");
+                    stopit();
+                }
+            }
+            else if(idd==7){
+                items[2][0] = 1;
+                if(items[0][0]==1 && items[1][0] == 1 || items[0][2]==1 && items[1][1] == 1 || items[2][1]==1 && items[2][2] == 1)
+                {
+                    $("h1").text("Player 2 Wins!");
+                    stopit();
+                }
+
+            }
+            else if(idd==8){
+                items[2][1] = 1;
+                if(items[2][0]==1 && items[2][2] == 1 || items[0][1]==1 && items[1][1] == 1)
+                {
+                    $("h1").text("Player 2 Wins!");
+                    stopit();
+                }
+
+            }
+            else if(idd==9){
+                items[2][2] = 1;
+                if(items[0][0]==1 && items[1][1] == 1 || items[0][2]==1 && items[1][2] == 1 || items[2][0]==1 && items[2][1] == 1)
+                {
+                    $("h1").text("Player 2 Wins!");
+                    stopit();
+                }
+                
+            }
+        }
+        n++;
+        if(n==9)
+        {
+            if(document.querySelector("h1").innerText == "Tic-Tac-Toe!")
+            $("h1").text("Draw!");
+        }
+    }
+});
+$(".refresh").click(function ()
+{
+    location.reload();
+});
+    </script>
+</body>
+</html>
